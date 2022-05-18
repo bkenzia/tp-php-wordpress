@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        {% for tag in tags %}
+            <article class="articles">
+                <h2><a href="{{path('tag_show', {'id':tag.id})}}">{{ tag.name }}</a></h2>
+                <p>{{ tag.description }}</p>
+                
+                
+                {% for  article in tag.articles %}
+                    <h3>{{article.title}}</h3>
+                    <p>{{article.content}}</p>
+                {% endfor %}
+                <div class="siparateur"></div>
+            </article>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+    {% block stylesheets %}
+    
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% endblock %}
+    {% block title %}catégorie{% endblock %}
+    
+{% block body %}
+<div class="main">
+        <article class="articles">
+            <h2>{{categorie.nom}}</h2>
+            <p>{{categorie.description}}</p>
+            <p><a href="{{path('categories')}}">listes des catégories</a></p>
+        </article>
+    </div>
+{% endblock %}

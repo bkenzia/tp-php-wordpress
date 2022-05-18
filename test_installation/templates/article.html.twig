@@ -1,0 +1,19 @@
+
+ {% extends "base.html.twig" %}
+ {% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+ {% endblock %}
+ {% block title %} Article {% endblock %}
+    
+
+{% block body %}
+
+    <div class="main">
+        <article class="articles">
+            <h2>le titre de l'article est : {{article['titre']}}</h2>
+            <p>{{article['contenu']}}</p>
+            <p><a class"page_principale" href="{{path('articles')}}">retoure à la liste de nos articles</a></p>
+        </article>
+    </div>
+{% endblock %}

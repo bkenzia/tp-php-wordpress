@@ -1,0 +1,12 @@
+{% extends "front/home.html.twig" %}
+{% block main %}
+    <h2>les produits de notre boutique </h2>
+    {% for product in products %}
+        <h2><a href="{{path('product_show', {'id':product.id})}}">{{product.name}}</a></h2>
+        <p>la description du produit : {{product.description}}</p>
+        <p>catégorie :{{product.category.name}}</p>
+        <h3>le prix : {{product.price}}</h3>
+        <p>la contité en stoque :{{product.stock}}</p>
+        <hr>
+    {% endfor  %}
+{% endblock %}

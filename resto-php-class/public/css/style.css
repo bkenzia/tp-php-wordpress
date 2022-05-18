@@ -1,0 +1,52 @@
+header{
+    
+    /* overflow: hidden; */
+    background-color: #333;
+     position: fixed; 
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 2;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+    
+}
+main{
+   margin-top: 10rem;
+   margin-bottom: 5rem;
+}
+
+header .logo{
+    width: 9.5% !important;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+
+
+.card {
+    text-align: center;
+  }
+  
+  @media (max-width: 990px) {
+    .resizeimg {
+      height: auto;
+    }
+    nav .brand-logo{
+      left:90% !important;
+    }
+    header .logo{
+      width: 90% !important;}
+      nav .brand-logo{
+        font-size: 3rem;
+      }
+  }
+  
+  @media (min-width: 1000px) {
+    .resizeimg {
+      width: auto;
+      height: 350px;
+    }
+  }
+
+  .sidenav-overlay{
+      display: none !important;
+  }

@@ -1,0 +1,25 @@
+h1{
+   text-align: center;
+   margin-top: 2rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.articles{
+    /* text-align: center; */
+    width: 70%;
+    padding: 1rem;
+}
+.articles h2{
+    text-align: center;
+}
+.siparateur{
+    border: 1px solid gray;
+}
+.page_principale{
+    color: red !important;
+}

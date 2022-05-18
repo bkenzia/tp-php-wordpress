@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>super_hero</h1>
+        <nav>
+            <ul>
+            <li><a href="{{ path('heros-liste')}}">Heros</a></li>
+            <li><a href="{{ path('licence_liste')}}">Licences</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <h2>Licence "{{licence.name}}"</h2>
+        <p>{{licence.description}}</p>
+        <hr>
+        <h2 class="ajouter">Les heros de {{licence.name}} </h2>
+        {% for hero in licence.heroes %}
+        <h3>{{hero.name}}</h3>
+        <p>{{ hero.history}}</p>
+        {% endfor %}
+        <h3 class="ajouter"><a href="{{ path('licence_liste')}}"> retoure à la liste des licences</a></h3>
+    </div>
+</body>
+</html>

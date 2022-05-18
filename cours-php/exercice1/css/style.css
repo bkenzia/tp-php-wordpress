@@ -1,0 +1,112 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 0rem 1rem;
+}
+header nav ul{
+    display: flex;
+    gap: 1.5rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: indianred;
+    text-decoration : underline;
+    
+}
+ul{
+    padding: 0;
+}
+main{
+    padding: 0.5rem 4rem;
+}
+main h2{
+    text-align: center;
+    padding: 1rem 0rem; 
+}
+main section{
+    border: 1px solid gray;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+main .carte{
+    margin-top: 2rem;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 0rem 0.25rem 0rem 1rem;
+}
+footer nav ul{
+   text-align: center;
+  
+}
+footer nav {
+    border: 1px solid gray;
+    padding: 0rem 2rem;
+    width: 25%;
+    
+    margin: 0.5rem;
+}
+table{
+    padding: 0rem 10rem;
+}
+td{
+    width: 100%;
+}
+h3{
+    text-align: center;
+}
+div {
+    border: 1px solid gray;
+    margin-bottom: 1rem;
+}
+.plats td{
+    border: 1px solid gray;
+    padding: 0;
+}
+
+.deconnexion{
+    padding-top: 0rem !important;
+    
+
+}
+.deconnexion input{
+    padding-top: 0rem;
+    border: 1px solid white !important;
+    background-color: white;
+}
+
+.deconnexion input:hover{
+    text-decoration: underline;
+    color: indianred;;
+}
+
+.lienModifier{
+    border: 2px solid #4a4545;
+    padding: 0.25rem 0.75rem;
+    padding-bottom: 0.25rem;
+    background-color: rgb(113 23 23) !important;
+    color: white;
+    height: 1rem;
+    margin-top: 1rem;
+}
+
+.lienModifier:hover{
+    text-decoration: none;
+    color: white;
+
+}
+
+.modification{
+    display: flex;
+    gap: 0.25rem;
+}

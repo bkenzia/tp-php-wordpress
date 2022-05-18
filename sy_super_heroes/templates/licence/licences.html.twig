@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>super_hero</h1>
+        <nav>
+            <ul>
+            <li><a href="{{ path('heros-liste')}}">Heros</a></li>
+            <li>Licences</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        {% for licence in licences %}
+        <div>
+            <div class="contenu">
+                <h2 class="ajouter">La liste des licences des super heros</h2>
+                <h2><a href="{{ path('licence_show', { 'id':licence.id})}}">{{ licence.name}}</a></h2>
+                <p>{{ licence.description }}</p>
+            </div>
+            <h3 >les heros qui ont la licence "{{ licence.name}}" :</h3>
+            {% for hero in licence.heroes %}
+                <h3>{{hero.name}}</h3>
+                <p>{{hero.history}}</p>
+                
+            {% endfor %}
+            <div class="lien">
+                <h3><a href="{{path('licence_show',{'id':licence.id})}}">afficher </a></h3>
+                <h3><a href="{{path('licence_delete',{'id':licence.id})}}">suprimer </a></h3>
+                <h3><a href="{{path('licence_update',{'id':licence.id})}}">modifier la licence </a></h3>
+            </div>
+            <hr>
+        {% endfor %}
+        </div>
+        <h3 class="ajouter"><a href="{{path('licence_create')}}">ajouter une licence </a></h3>
+    </div>
+
+</body>
+</html>

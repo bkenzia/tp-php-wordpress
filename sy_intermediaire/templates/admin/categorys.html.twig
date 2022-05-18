@@ -1,0 +1,17 @@
+{% extends "admin/home.html.twig" %}
+{% block main %}
+    <h2>La liste des categoies</h2>
+    {% for message in app.flashes('notice') %}
+        {{message}}
+    {% endfor %}
+    
+    {% for category in categorys %}
+        <h2>{{category.name}}</h2>
+        <p>{{category.description}}</p>
+        <h3><a href="{{path('admin_category_show',{'id':category.id})}}">afficher </a></h3>
+        <h3><a href="{{path('admin_category_delete',{'id':category.id})}}" onclick="return confirm('vous êtes sur de la suprission?')">suprimer </a></h3>
+        <h3><a href="{{path('admin_category_update',{'id':category.id})}}">modifier la categoriet </a></h3>
+        <hr>
+    {% endfor %}
+    <h2><a href="{{path('admin_create_category')}}">ajouter une categorie</a></h2>
+{% endblock %}

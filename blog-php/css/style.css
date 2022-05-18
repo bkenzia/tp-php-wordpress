@@ -1,0 +1,41 @@
+header, main, nav ul {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ul li, .articles li {
+    list-style: none;
+}
+
+main {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+main section {
+    width: 70%;
+    padding: 15px;
+}
+
+main section + section {
+    width: 30%;
+    padding: 15px;
+}
+
+.articles {
+    padding: 0;
+}
+
+.articles li {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #000;
+}
+
+.image {
+    height: 250px;
+    overflow: hidden;
+}

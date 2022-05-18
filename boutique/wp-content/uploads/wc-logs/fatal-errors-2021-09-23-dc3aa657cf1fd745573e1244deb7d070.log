@@ -1,0 +1,4 @@
+2021-09-23T07:39:00+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans C:\MAMP\htdocs\boutique\wp-includes\Requests\Transport\cURL.php à la ligne 484
+
+2021-09-23T14:36:40+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans C:\MAMP\htdocs\boutique\wp-admin\includes\class-wp-filesystem-direct.php à la ligne 66
+

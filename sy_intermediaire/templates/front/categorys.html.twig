@@ -1,0 +1,15 @@
+{% extends "front/home.html.twig" %}
+{% block main %}
+    <h2>la liste des catégories</h2>
+    {% for category in categorys %}
+        <h3>{{ category.name }}</h3>
+        <p>{{category.description}}</p>
+        <h3>les produits de cette catégorie :</h3>
+        {% for product in category.products %}
+            <h4>le nom de produit : {{product.name}}</h3>
+            <p>le prix de produit : {{product.description}}</p>
+            <p>le prix de produit : {{product.price}}</p>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+{% endblock %}

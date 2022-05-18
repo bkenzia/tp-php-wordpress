@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        {% for categorie in categories %}
+            <article class="articles">
+                <h2><a href="{{path('categorie_show', {'id':categorie.id})}}">{{ categorie.name }}</a></h2>
+                <p>{{ categorie.description }}</p>
+                <p>{{ categorie.color }}</p>
+
+                {% for  article in categorie.articles %}
+                    <h3>{{article.title}}</h3>
+                    <p>{{article.content}}</p>
+                {% endfor %}
+                <h2><a href="{{ path('categorie_update',{'id':categorie.id})}}">modifier la categorie</a></h2>
+                <h2><a href="{{ path('categorie_delete',{'id':categorie.id})}}">suprimer</a></h2>
+                <div class="siparateur"></div>
+            </article>
+        {% endfor %}
+        <h2><a href="{{path('categorie_create')}}">ajouter une categorie</a></h2>
+    </div>
+</body>
+</html>

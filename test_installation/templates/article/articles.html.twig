@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+     <div class="main">
+        {% for article in articles %}
+            <article class="articles">
+                <h2> {{ article.title}}</h2>
+                <p> {{ article.content }}</p>
+                <h3>{{ article.date|date("d/m/y") }}</h3>
+                <h3>{{article.categorie.name}}</h3>
+                <h3>{{article.tag.name}}</h3>
+                <h2><a href="{{ path('article_update',{'id':article.id})}}">modifier l'article</a></h2>
+                <h2><a href="{{ path('article_delete',{'id':article.id})}}">suprimer</a></h2>
+                <div class="siparateur"></div>
+            </article>
+        {% endfor %}
+        <h2><a href="{{path('article_create')}}">ajouter</a></h2>
+    </div>
+</body>
+</html>

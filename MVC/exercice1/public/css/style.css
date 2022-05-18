@@ -1,0 +1,14 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+.logo{
+    width: 15%;
+}
+a:hover{
+    color: rgb(88, 8, 8) !important;
+}

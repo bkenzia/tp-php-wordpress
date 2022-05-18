@@ -1,0 +1,18 @@
+{% extends "front/home.html.twig" %}
+{% block main %}
+
+    <h2>le resultat de recher de term "{{term}}"</h2>
+    {% if products==[] %}
+        <h2>aucun produit correspond à votre recherche </h2>
+    {% else %}
+    
+        {% for product in products %}
+            <h2>le nom de produit :{{product.name}}</h2>
+            <p> la description : {{product.description}}</p>
+            <h2>le prix : {{product.price}}€</h2>
+            <h3>la contité en stoque : {{product.stock}}</h3>
+            <h3>la catégorie de produit : {{product.category.name}}</h3>
+            <hr>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "admin/home.html.twig" %}
+
+{% block main %}
+    <h2>tous les categories</h2>
+   
+    {% for cat in cats.getAll() %}
+        <p>{{cat.name}}</p>
+    {% endfor %}
+    <h2>La liste des produits</h2>
+    {% for message in app.flashes('notice') %}
+        {{message}}
+    {% endfor %}
+    {% for product in products %}
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>
+        <h3>{{product.price}}</h3>
+        <h4>{{product.stock}}</h4>
+        <h4>{{product.category.name}}</h4>
+        <h3><a href="{{path('admin_product_show',{'id':product.id})}}">afficher </a></h3>
+        <h3><a href="{{path('admin_product_delete',{'id':product.id})}}">suprimer </a></h3>
+        <h3><a href="{{path('admin_product_update',{'id':product.id})}}">modifier le produit </a></h3>
+        <hr>
+    {% endfor %}
+    <h2><a href="{{path('admin_create_product')}}">ajouter un produit</a></h2>
+{% endblock %}

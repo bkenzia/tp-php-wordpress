@@ -1,0 +1,4 @@
+2021-09-24T06:51:41+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans C:\MAMP\htdocs\boutique\wp-admin\includes\class-wp-filesystem-direct.php à la ligne 66
+
+2021-09-24T14:46:24+00:00 CRITICAL Maximum execution time of 30 seconds exceeded dans C:\MAMP\htdocs\boutique\wp-admin\includes\file.php à la ligne 1558
+

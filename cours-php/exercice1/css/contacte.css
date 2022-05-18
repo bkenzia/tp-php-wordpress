@@ -1,0 +1,16 @@
+.form_contact div{
+    border: 1px solid white;
+    margin-bottom: 0% !important;
+}
+.form_contact input{
+   padding: 0.5rem;
+   margin: 1rem 1rem;
+   
+   
+  
+}
+
+.form_contact textarea{
+    margin-left: 0.75rem;
+    margin-top: 0rem;
+}

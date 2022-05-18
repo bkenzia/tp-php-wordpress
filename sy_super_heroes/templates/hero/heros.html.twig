@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>super_hero</h1>
+        <nav>
+            <ul>
+            <li><a href="{{ path('heros-liste')}}">Heros</a></li>
+            <li><a href="{{ path('licence_liste')}}">Licences</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <h2 class="ajouter">La liste des super hero</h2>
+        {% for hero in heros %}
+            <div>
+                <div class="contenu">
+
+                    <h2>{{ hero.name}}</h2>
+                    <p>{{ hero.history}}</p>
+                    <h3 >la licence de "{{hero.name}}":</h3>
+                    <p>{{ hero.licence.name}}</p>
+                </div>
+                <div class="lien">
+                    <h3><a href="{{path('hero_show',{'id':hero.id})}}">afficher </a></h3>
+                    <h3><a href="{{path('hero_delete',{'id':hero.id})}}">suprimer </a></h3>
+                    <h3><a href="{{path('hero_update',{'id':hero.id})}}">modifier l'hero </a></h3>
+                </div>
+                <hr>
+            </div>
+        {% endfor %}
+        <h3 class="ajouter"><a href="{{path('hero_create')}}"> ajouter un hero</a></h3>
+    </div>
+</body>
+</html>
